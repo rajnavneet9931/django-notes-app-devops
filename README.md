@@ -1,29 +1,40 @@
-# Simple Notes App 
-This is a simple notes app built with React and Django.
+# 🚀 Django Notes App (DevOps Project)
 
-## Requirements
-1. Python 3.9
-2. Node.js
-3. React
+## 📌 Overview
+This is a production-ready Notes application built using Django and React, containerized with Docker and deployed using a 3-tier architecture.
 
-## Installation
-1. Clone the repository
-```
-git clone
+---
 
-2. Build the app
-```
-docker build -t notes-app .
-```
+## 🏗 Architecture
 
-3. Run the app
-```
-docker run -d -p 8000:8000 notes-app:latest
-```
+Client → Nginx → Gunicorn → Django → MySQL
 
-## Nginx
+---
 
-Install Nginx reverse proxy to make this application available
+## 🛠 Tech Stack
 
-`sudo apt-get update`
-`sudo apt install nginx`
+- Django (Backend)
+- React (Frontend)
+- Gunicorn (WSGI server)
+- Nginx (Reverse proxy + static files)
+- MySQL (Database)
+- Docker & Docker Compose
+
+---
+
+## ⚙️ Features
+
+- Dockerized multi-container application
+- Nginx reverse proxy configuration
+- Gunicorn for production-ready serving
+- MySQL with persistent storage
+- Static files served via Nginx
+- Environment-based configuration using `.env`
+- Secure setup (no public DB exposure)
+
+---
+
+## 🚀 Setup & Run
+
+```bash
+docker compose up -d --build
