@@ -12,7 +12,7 @@ RUN apt-get update \
 # Install app dependencies
 RUN pip install mysqlclient
 RUN pip install --no-cache-dir -r requirements.txt
-
+#cache
 COPY . /app/backend
 
 EXPOSE 8000
